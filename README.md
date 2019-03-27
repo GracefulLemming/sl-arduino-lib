@@ -30,87 +30,11 @@ The following functions are specifically to be used with Square Roots (CSTO):
 
 `touches()` - Tells you if your robot's red button was pressed.
 ## Examples:
-Example 1: 
 
-``` C++
-// You need this to make everything work:
-#include <robot.h>
+To see examples, go to `File > Examples > Examples From Custom Libraries > Robot`
 
-// Make your robot! You can name it anything!
-fred Robot();
+If you are using the web editor you can see the examples in `examples > libraries`
 
-void setup() {
-    // Note: Robots arent very good listeners,
-    // so to make them do anything you have to tell them directly using their name!
-	fred.begin();
-	// Blink the light!
-	fred.blink();
-	// Open the serial monitor to see what they say!
-	fred.say("Time to stretch!");
-	// Move forward for 3 seconds
-	fred.moveForward(3);
-	fred.blink();
-	// Move backward for 3 seconds
-	fred.moveBackward(3);
-	fred.blink();
-	// Turn left for 1 second
-	fred.turnLeft(1);
-	fred.blink();
-	// Turn right for 2 seconds
-	fred.turnRight(2);
-	fred.blink();
-	// Turn left for 1 second
-	fred.turnLeft(1);
-}
-void loop() {
-}
-```
-Example 2:
-
-``` C++
-// You need this to make everything work:
-#include <robot.h>
-
-// Make your robot! You can name it anything!
-alice Robot();
-
-void setup() {
-    // Note: Robots arent very good listeners,
-    // so to make them do anything you have to tell them directly using their name!
-	alice.begin();
-	// Blink the light!
-	alice.blink();
-	// Open the serial monitor to see what they say!
-	alice.say("Time to stretch!");
-	// Move forward for 3 seconds
-	alice.moveForward(3);
-	alice.blink();
-	// Move backward for 3 seconds
-	alice.moveBackward(3);
-	alice.blink();
-	// Turn left for 1 second
-	alice.turnLeft(1);
-	alice.blink();
-	// Turn right for 2 seconds
-	alice.turnRight(2);
-	alice.blink();
-	// Turn left for 1 second
-	alice.turnLeft(1);
-}
-
-void loop() {
-alice.moveForward(1);
-if (alice.touched()) {
-	alice.say("Ouch!");
-	alice.blink();
-	// Turn right for a half of a second
-	alice.turnRight(0.5);
-	// Turn left for a second
-	alice.turnLeft(1);
-	// Turn right for half a second
-	alice.turnRight(0.5);
-}
-```
 
 ## Troubleshooting:
 If you are having trouble, get a Northeastern student to help you!
@@ -142,7 +66,8 @@ The libraries folder can be accessed by going to `Sketch > Include Library > Add
 If you are using arduino online, the same thing can be achieved by going to the library tab and uploading the .ZIP as a custom library.
 
 The most up to date download will be live 
-[on my GitHub](http://github.com/gracefullemming/sl-arduino-lib)
+[on my GitHub.](http://github.com/gracefullemming/sl-arduino-lib)
+Once there, you can click the green clone or download button, and then download the .ZIP file
 
 -------
 This library and all related material was created by Caleb Trevino, and is not sponsored, endorsed, nor maintained by Northeastern University, Northeastern University College of Engineering, or Northeastern University Service Learning.
