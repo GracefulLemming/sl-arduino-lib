@@ -1,0 +1,11 @@
+Robot	KEYWORD1
+moveForward	KEYWORD2
+moveBackward	KEYWORD2
+turnLeft	KEYWORD2
+turnRight	KEYWORD2
+stop	KEYWORD2
+lift	KEYWORD2
+drop	KEYWORD2
+wait	KEYWORD2
+blink	KEYWORD2
+touches	KEYWORD2
