@@ -1,7 +1,7 @@
 #include "Arduino.h"
-#include "Robot.h"
+#include "MyBot.h"
 
-void Robot::begin() {
+void MyBot::begin() {
     rightWheel.attach(_rightWheel);
     leftWheel.attach(_leftWheel);
     arm.attach(_arm);
@@ -9,62 +9,62 @@ void Robot::begin() {
     pinMode(_led, OUTPUT);
     pinMode(_button, INPUT_PULLUP);
 }
-void Robot::moveForward(double seconds) {
+void MyBot::moveForward(double seconds) {
     leftWheel.write(0);
     rightWheel.write(180);
     Robot::wait(seconds);
     stop();
 }
-void Robot::moveBackward(double seconds) {
+void MyBot::moveBackward(double seconds) {
     leftWheel.write(180);
     rightWheel.write(0);
     Robot::wait(seconds);
     stop();
 }
-void Robot::turnRight(double seconds) {
+void MyBot::turnRight(double seconds) {
     leftWheel.write(0);
     rightWheel.write(0);
     Robot::wait(seconds);
     stop();
 }
-void Robot::turnLeft(double seconds) {
+void MyBot::turnLeft(double seconds) {
     leftWheel.write(180);
     rightWheel.write(180);
     Robot::wait(seconds);
     stop();
 }
-void Robot::stop() {
+void MyBot::stop() {
     leftWheel.write(90);
     rightWheel.write(90);
 }
-void Robot::lift() {
+void MyBot::lift() {
     arm.write(160);
 }
-void Robot::drop() {
+void MyBot::drop() {
     arm.write(60);
 }
-void Robot::blink() {
+void MyBot::blink() {
     digitalWrite(_led, HIGH);
     Robot::wait(0.1);
     digitalWrite(_led, LOW);
 }
-void Robot::say(String output) {
+void MyBot::say(String output) {
     Serial.println(output);
 }
-/*void Robot::say(int output) {
+/*void MyBot::say(int output) {
     say(String(output));
 }
-void Robot::say(bool output) {
+void MyBot::say(bool output) {
     output ? say("true") : say("false");
 }*/
-bool Robot::touches() {
+bool MyBot::touches() {
     pollButton();
     return _touched;
 }
-void Robot::pollButton() {
+void MyBot::pollButton() {
     _touched = digitalRead(_button) == LOW;
 }
-void Robot::wait(double seconds) {
+void MyBot::wait(double seconds) {
     int time = seconds * 1000;
     while (time > 0) {
         pollButton();
