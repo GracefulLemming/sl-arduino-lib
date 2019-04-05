@@ -12,25 +12,25 @@ void MyBot::begin() {
 void MyBot::moveForward(double seconds) {
     leftWheel.write(0);
     rightWheel.write(180);
-    Robot::wait(seconds);
+    MyBot::wait(seconds);
     stop();
 }
 void MyBot::moveBackward(double seconds) {
     leftWheel.write(180);
     rightWheel.write(0);
-    Robot::wait(seconds);
+    MyBot::wait(seconds);
     stop();
 }
 void MyBot::turnRight(double seconds) {
     leftWheel.write(0);
     rightWheel.write(0);
-    Robot::wait(seconds);
+    MyBot::wait(seconds);
     stop();
 }
 void MyBot::turnLeft(double seconds) {
     leftWheel.write(180);
     rightWheel.write(180);
-    Robot::wait(seconds);
+    MyBot::wait(seconds);
     stop();
 }
 void MyBot::stop() {
@@ -45,7 +45,7 @@ void MyBot::drop() {
 }
 void MyBot::blink() {
     digitalWrite(_led, HIGH);
-    Robot::wait(0.1);
+    MyBot::wait(0.1);
     digitalWrite(_led, LOW);
 }
 void MyBot::say(String output) {
