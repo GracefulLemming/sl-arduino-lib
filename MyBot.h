@@ -1,9 +1,9 @@
-#ifndef Robot_h
-#define Robot_h
+#ifndef MyBot_h
+#define MyBot_h
 #include "Arduino.h"
 #include "Servo.h"
 
-class Robot
+class MyBot
 {
 private:
     Servo leftWheel;
@@ -21,8 +21,8 @@ private:
     
     
 public:
-    Robot() = default;
-    ~Robot() = default;
+    MyBot() = default;
+    ~MyBot() = default;
     
     void begin();
     void moveForward(double seconds);
